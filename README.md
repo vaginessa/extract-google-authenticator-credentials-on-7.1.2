@@ -2,7 +2,9 @@
 
 ## Works for me (TM)
 
-This was tested only with google authenticator v2.49 on android 4.2.1 (rooted)
+This was tested only with Google Authenticator 4.74 on android 7.1.2 (not rooted, via TWRP custom recovery)
+
+This is a fork! Check out the original work.
 
 Scripts in this repository highly depend on sqlite database schema of google authenticator app.
 So it the schema changes in new versions this method could break until i update the repository.
@@ -34,8 +36,11 @@ Should work everywhere as long as you have all dependencies installed (see below
 - windows via cygwin
 
 
-## Step1
+## Step1 (root edition)
 Root your phone that has google authenticator installed
+
+## Step1 (no root edition)
+Install a custom recovery (TWRP highly recommended), mount "System" partition.
 
 ## Step2
 Install adb on your pc/mac
@@ -43,7 +48,7 @@ Install adb on your pc/mac
 ## Step3
 Make sure you have sqlite3, netcat (nc), adb and bash installed on your machine
 
-## Step4
+## Step4 (root edition)
 by default, when you do "adb pull", this command does not run as root on device, so you cant access files you want
 Install Adb unsecure, to allow "abd pull" command as root
 https://play.google.com/store/apps/details?id=eu.chainfire.adbd
@@ -51,6 +56,8 @@ http://forum.xda-developers.com/showthread.php?t=1687590
 
 !!! IMPORTANT: open "adbd insecure" app and check "Enable insecure adbd"
 
+## Step4 (no root edition)
+Skip to step5
 
 ## Step5
 plug the phone
